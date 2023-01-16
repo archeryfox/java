@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-286.0" y="831.0">Main</node>
+    <node x="-490.4263322884012" y="819.5">Prints</node>
+  </nodes>
+  <notes>
+    <note x="-121.5555555555556" y="693.7932098765432">
+      <node>Main</node>
+      <value>Крассивая диаграмка для наглядности,\n но тут не отображаются поля по какой то причине...</value>
+      <edge>
+        <point x="60.0" y="-85.0" />
+        <point x="-88.0" y="869.0" />
+        <point x="39.4444444444444" y="869.0" />
+        <point x="0.0" y="56.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="Main" target="Prints" relationship="GENERALIZATION">
+      <point x="-60.0" y="-85.0" />
+      <point x="-208.0" y="781.75" />
+      <point x="-404.4263322884012" y="781.75" />
+      <point x="0.0" y="96.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.3443983402489628" showDependencies="true" x="-53.86574074074076" y="884.8425925925926" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
