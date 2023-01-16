@@ -1,21 +1,27 @@
 import java.util.Scanner;
 
 public class Main extends Prints {
+
     /**
-      Выключатель
+     * Выключатель
      */
     private static boolean ON = true;
+
     /**
      * Выбор действия
      */
     public static int Choice = 0;
 
     /**
+     * Ввод с клавиатуры
+     */
+    static Scanner sc = new Scanner(System.in);
+
+    /**
      * Точка входа
      */
     public static void main(String[] args) {
-        int a = 0, b = 0;
-        var sc = new Scanner(System.in);
+        double a = 0, b = 0;
         while (ON) {
             println("""
                     Выберите действие:\s
@@ -26,34 +32,57 @@ public class Main extends Prints {
                      5. a^b
                      6 - Выход""");
             print("я выбираю действие....");
+
             Choice = sc.nextInt();
-            if (Choice == 6){
+            if (Choice == 6) {
                 println("бб юзер 👋");
                 ON = !ON;
                 return;
                 //вот это реально гениальный выход из любой ситуации........
             }
             print("a = ");
-            a = sc.nextInt();
+            a = sc.nextDouble();
+
             System.out.print("b = ");
-            b = sc.nextInt();
+            b = sc.nextDouble();
+
             switch (Choice) {
                 case 1:
                     System.out.println("a + b = ");
-                    println(Summing(a, b));
+                    if (Summing(a, b) - Math.round(Summing(a, b)) == 0) {
+                        println((int) Summing(a, b));
+                    } else {
+                        println(Summing(a, b));
+                    }
                     break;
                 case 2:
                     println("a - b = ");
-                    print(Substracting(a, b));
+                    if (Substracting(a, b) - Math.round(Substracting(a, b)) == 0) {
+                        println((int) Substracting(a, b));
+                    } else {
+                        println(Substracting(a, b));
+                    }
                     break;
                 case 3:
-                    println("a × b = "+Multiplying(a, b));
+                    if (Multiplying(a, b) - Math.round(Multiplying(a, b)) == 0) {
+                        println("a × b = " + (int) Multiplying(a, b));
+                    } else {
+                        println("a × b = " + Multiplying(a, b));
+                    }
                     break;
                 case 4:
-                    System.out.printf("\na ÷ b = %s\n", Dividing(a,b));
+                    if (Dividing(a, b) - Math.round(Dividing(a, b)) == 0) {
+                        println((int) Dividing(a, b));
+                    } else {
+                        System.out.printf("\na ÷ b = %s\n", Dividing(a, b));
+                    }
                     break;
                 case 5:
-                    println("a^b ="+ Math.pow(a, b));
+                    if (Math.pow(a, b) - Math.round(Math.pow(a, b)) == 0) {
+                        println((int) Math.pow(a, b));
+                    } else {
+                        println("a^b =" + Math.pow(a, b));
+                    }
                     break;
             }
         }
@@ -98,4 +127,5 @@ public class Main extends Prints {
     static double Multiplying(double a, double b) {
         return a * b;
     }
+
 }

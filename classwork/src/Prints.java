@@ -3,6 +3,7 @@
  */
 public class Prints {
 
+
     public static void println(int a) {
         System.out.println(a);
     }
@@ -26,5 +27,4 @@ public class Prints {
     public static void print(String a) {
         System.out.print(a);
     }
-
 }
