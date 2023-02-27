@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
+        var bb = new BoardEngineer("Бортпроводником", 34450);
+        bb.Work();
+        bb.Work(bb.Type,bb.Salary);
     }
 }
